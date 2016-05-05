@@ -2,7 +2,7 @@
 
 expressjs middleware for yamvish.
 
-isomorphism rocks. simple. ultra fast. nothing to rewrite.
+isomorphism rocks. ultra simple. ultra fast.
 
 ## Licence
 
