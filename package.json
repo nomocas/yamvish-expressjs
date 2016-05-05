@@ -1,26 +1,20 @@
 {
-  "name": "yamvish",
-  "version": "0.11.0",
-  "description": "Yet Another MVish javascript library",
+  "name": "yamvish-expressjs",
+  "version": "0.1.0",
+  "description": "expressjs middleware for yamvish isomorphism",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha",
-    "dist": "npm run build  && npm run min",
-    "build": "browserify -s y index.js > dist/yamvish.js",
-    "min": "uglifyjs dist/yamvish.js --compress --mangle  -o dist/yamvish.min.js",
-    "serve": "live-server . --ignore=node_modules,lib",
-    "watch": "watch 'browserify -s y index.js > dist/yamvish.js' ./lib",
-    "watch:example": "watch 'browserify -s y example/main.js > example/bundle.js' ./lib",
-    "bump:patch": "npm run dist && git add -A && git commit -m 'patch bump' && git push && mversion patch -m && git push --tags && npm publish && git push",
-    "bump:minor": "npm run dist && git add -A && git commit -m 'minor bump' && git push && mversion minor -m && git push --tags && npm publish && git push",
-    "bump:major": "npm run dist && git add -A && git commit -m 'major bump' && git push && mversion major -m && git push --tags && npm publish && git push"
+    "bump:patch": " git add -A && git commit -m 'patch bump' && git push && mversion patch -m && git push --tags && npm publish && git push",
+    "bump:minor": " git add -A && git commit -m 'minor bump' && git push && mversion minor -m && git push --tags && npm publish && git push",
+    "bump:major": " git add -A && git commit -m 'major bump' && git push && mversion major -m && git push --tags && npm publish && git push"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nomocas/yamvish.git"
+    "url": "git+https://github.com/nomocas/yamvish-expressjs.git"
   },
   "keywords": [
     "mvvm",
@@ -36,9 +30,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nomocas/yamvish/issues"
+    "url": "https://github.com/nomocas/yamvish-expressjs/issues"
   },
-  "homepage": "https://github.com/nomocas/yamvish",
+  "homepage": "https://github.com/nomocas/yamvish-expressjs",
   "devDependencies": {
     "chai": "^2.2.0",
     "gulp": "^3.9.0",
@@ -50,32 +44,13 @@
     "jshint-stylish": "^1.0.1"
   },
   "dependencies": {
-    "elenpi": "^0.2.5",
-    "nomocas-utils": "^0.0.6"
-  },
-  "gitHead": "255555e6e667745f222f6991b89d04267f00c585",
-  "_id": "yamvish@0.11.0",
-  "_shasum": "fe23b9be2a90fb244d8750e452c8d238ca683800",
-  "_from": "yamvish@0.11.0",
-  "_npmVersion": "2.15.1",
-  "_nodeVersion": "4.4.3",
-  "_npmUser": {
-    "name": "nomocas",
-    "email": "gilles.coomans@gmail.com"
+    "pretty": "^1.0.0",
+    "yamvish": "^0.11.0"
   },
   "maintainers": [
     {
       "name": "nomocas",
       "email": "gilles.coomans@gmail.com"
     }
-  ],
-  "dist": {
-    "shasum": "fe23b9be2a90fb244d8750e452c8d238ca683800",
-    "tarball": "https://registry.npmjs.org/yamvish/-/yamvish-0.11.0.tgz"
-  },
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/yamvish-0.11.0.tgz_1462486678523_0.36851918254978955"
-  },
-  "_resolved": "https://registry.npmjs.org/yamvish/-/yamvish-0.11.0.tgz"
+  ]
 }
