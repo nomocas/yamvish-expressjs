@@ -2,12 +2,11 @@
  * yamvish twopass rendering middleware
  */
 var fs = require('fs'),
-	path = require('path'),
 	pretty = require('pretty');
 
-module.exports = function(yamapp, indexPath, prettyOutput) {
+module.exports = function(yamapp, prettyOutput) {
 	var y = yamapp.y,
-		indexFile = fs.readFileSync(indexPath, 'utf8'),
+		indexFile = fs.readFileSync(yamapp.index, 'utf8'),
 		indexTemplate = y.html.parse(indexFile, 'document')
 
 	if (!indexTemplate)
