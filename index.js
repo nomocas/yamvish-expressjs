@@ -2,12 +2,13 @@
  * yamvish twopass rendering middleware
  */
 var fs = require('fs'),
+	path = require('path'),
 	pretty = require('pretty');
 
-module.exports = function(yamapp, prettyOutput) {
+module.exports = function(yamapp, basePath, prettyOutput) {
 	var y = yamapp.y,
-		indexFile = fs.readFileSync(yamapp.index, 'utf8'),
-		indexTemplate = y.html.parse(indexFile, 'document')
+		indexFile = fs.readFileSync(path.join(basePath, yamapp.index), 'utf8'),
+		indexTemplate = y.html.parse(indexFile, 'document');
 
 	if (!indexTemplate)
 		throw new Error('index template parsing failed : ' + indexTemplate);
