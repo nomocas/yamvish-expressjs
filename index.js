@@ -7,7 +7,7 @@ var fs = require('fs'),
 
 module.exports = function(yamapp, basePath, prettyOutput) {
 	var y = yamapp.y,
-		indexFile = fs.readFileSync(path.join(basePath, yamapp.index), 'utf8'),
+		indexFile = fs.readFileSync(path.join(basePath, yamapp.index || './index.html'), 'utf8'),
 		indexTemplate = y.html.parse(indexFile, 'document');
 
 	if (!indexTemplate)
