@@ -26,13 +26,11 @@ module.exports = function(yamapp, basePath, prettyOutput) {
 					res.end();
 				})
 				.catch(function(e) {
-					console.error('yamvish middleware error (2) : ', e);
-					console.trace(e)
+					// console.trace('yamvish middleware error (2) : ', e);
 					next(e);
 				});
 		} catch (e) {
-			console.error('yamvish middleware error (1) : ', e);
-			console.trace(e)
+			console.trace('yamvish middleware error (1) : ', e);
 			next(e);
 		}
 	};
